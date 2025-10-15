@@ -11,9 +11,7 @@
   Release operations:
   - Is the PR correctly labeled (e.g. DB, BISAppSettings change, Jenkins config change)?
   - Have any database changes been added correctly, if applicable?
-    https://github.com/isisbusapps/Schedule/blob/develop/DB%20Scripts/README.md
   - Is the branch for BISAppSettings changes clear, if applicable?
-    https://github.com/isisbusapps/ISISBusApps/wiki/Code-Reviews#bisappsettings-changes
   - Is the PR for BLAATs changes clear, if applicable?
   - Do any changes need to be made to Jenkins when this is merged or released?
 -->
