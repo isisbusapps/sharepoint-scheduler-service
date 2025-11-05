@@ -1,0 +1,155 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|c:\\programming\\sharepoint-scheduler-service\\webapptest\\webapptest\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|solutionrelative:webapptest\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|c:\\programming\\sharepoint-scheduler-service\\webapptest\\webapptest\\migrations\\20251015152322_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|solutionrelative:webapptest\\migrations\\20251015152322_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|c:\\programming\\sharepoint-scheduler-service\\webapptest\\webapptest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|solutionrelative:webapptest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|c:\\programming\\sharepoint-scheduler-service\\webapptest\\webapptest\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|solutionrelative:webapptest\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|c:\\programming\\sharepoint-scheduler-service\\webapptest\\webapptest\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|solutionrelative:webapptest\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|c:\\programming\\sharepoint-scheduler-service\\webapptest\\webapptest\\models\\moviecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|solutionrelative:webapptest\\models\\moviecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|c:\\programming\\sharepoint-scheduler-service\\webapptest\\webapptest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|solutionrelative:webapptest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|c:\\programming\\sharepoint-scheduler-service\\webapptest\\webapptest\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A281ED87-CEED-43C8-BEA2-09EDCCAC9864}|WebAppTest\\WebAppTest.csproj|solutionrelative:webapptest\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MoviesController.cs",
+              "DocumentMoniker": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Controllers\\MoviesController.cs",
+              "RelativeDocumentMoniker": "WebAppTest\\Controllers\\MoviesController.cs",
+              "ToolTip": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Controllers\\MoviesController.cs",
+              "RelativeToolTip": "WebAppTest\\Controllers\\MoviesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T10:15:29.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20251015152322_Initial.cs",
+              "DocumentMoniker": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Migrations\\20251015152322_Initial.cs",
+              "RelativeDocumentMoniker": "WebAppTest\\Migrations\\20251015152322_Initial.cs",
+              "ToolTip": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Migrations\\20251015152322_Initial.cs",
+              "RelativeToolTip": "WebAppTest\\Migrations\\20251015152322_Initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T15:23:23.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\appsettings.json",
+              "RelativeDocumentMoniker": "WebAppTest\\appsettings.json",
+              "ToolTip": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\appsettings.json",
+              "RelativeToolTip": "WebAppTest\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-15T13:50:30.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MovieContext.cs",
+              "DocumentMoniker": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Models\\MovieContext.cs",
+              "RelativeDocumentMoniker": "WebAppTest\\Models\\MovieContext.cs",
+              "ToolTip": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Models\\MovieContext.cs",
+              "RelativeToolTip": "WebAppTest\\Models\\MovieContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:48:01.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Models\\Movie.cs",
+              "RelativeDocumentMoniker": "WebAppTest\\Models\\Movie.cs",
+              "ToolTip": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Models\\Movie.cs",
+              "RelativeToolTip": "WebAppTest\\Models\\Movie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:45:02.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "WebAppTest\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "WebAppTest\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:39:50.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WebAppTest\\WeatherForecast.cs",
+              "ToolTip": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\WeatherForecast.cs",
+              "RelativeToolTip": "WebAppTest\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:39:38.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Program.cs",
+              "RelativeDocumentMoniker": "WebAppTest\\Program.cs",
+              "ToolTip": "C:\\Programming\\sharepoint-scheduler-service\\WebAppTest\\WebAppTest\\Program.cs",
+              "RelativeToolTip": "WebAppTest\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T13:36:44.13Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

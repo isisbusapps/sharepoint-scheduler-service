@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "F6R3gcs2uqk=",
+  "success": true,
+  "projectFilePath": "C:\\Programming\\sharepoint-scheduler-service\\MyApi\\MyApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kco77465\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "C:\\Users\\kco77465\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
