@@ -7,5 +7,11 @@ namespace SharepointSchedulerService.Controllers
     [ApiController]
     public class ReportServiceController : ControllerBase
     {
+        //GET /api/ReportService/test
+        [HttpGet("test")]
+        public IActionResult Test()
+        {
+            return Ok("Reports service is up and running");
+        }
     }
 }
