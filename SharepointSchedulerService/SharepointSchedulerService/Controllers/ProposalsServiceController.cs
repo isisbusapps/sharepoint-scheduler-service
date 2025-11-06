@@ -14,6 +14,7 @@ namespace SharepointSchedulerService.Controllers
             return Ok("Proposals service is up and running");
         }
 
+        //GET /api/ProposalsService/getClfRounds
         [HttpGet("getClfRounds")]
         public async Task<ActionResult<string>> GetClfRounds()
         {
@@ -21,6 +22,7 @@ namespace SharepointSchedulerService.Controllers
             //Data here
         }
 
+        //GET /api/ProposalsService/getIsisRounds
         [HttpGet("getIsisRounds")]
         public async Task<ActionResult<string>> getIsisRounds()
         {
@@ -28,12 +30,14 @@ namespace SharepointSchedulerService.Controllers
             //Data here
         }
 
+        //GET /api/ProposalsService/getExperimentReportsData
         [HttpGet("getExperimentReportsData")]
         public async Task<ActionResult<string>> getExperimentReportsData(
             [FromQuery] string facilityName,
             [FromQuery] int fromYear)
         {
             return Ok($"Returning data for {facilityName} from year {fromYear}");
+            //Data here
         }
 
     }
