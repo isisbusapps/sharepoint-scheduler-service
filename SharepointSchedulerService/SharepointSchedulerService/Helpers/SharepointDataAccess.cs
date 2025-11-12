@@ -21,14 +21,6 @@ namespace SharepointSchedulerService.Helpers
         private readonly string lsfDriveId;
 
         private GraphClient graphClient;
-        /*
-        private readonly string experimentalReportsClientId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365ClientId"];
-        private readonly string experimentalReportsClientSecretForSpSchedule = ConfigurationManager.AppSettings["SCHEDULE.SpSchedule365ClientSecret"];
-        private readonly string isisDriveId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365ISISSiteDriveId"];
-        private readonly string hplDriveId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365HPLSiteDriveId"];
-        private readonly string artemisDriveId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365ArtemisSiteDriveId"];
-        private readonly string lsfDriveId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365LSFSiteDriveId"];
-        */
 
         private static readonly ILog Logger = LogManager.GetLogger(typeof(SharepointDataAccess));
         private readonly string resultsFilter = "?orderby=lastModifiedDateTime desc&$top=500";
