@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using log4net;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SharepointSchedulerService.Models;
 
@@ -8,10 +9,14 @@ namespace SharepointSchedulerService.Controllers
     [ApiController]
     public class VisitsServiceController : ControllerBase
     {
+        private static readonly ILog Logger = LogManager.GetLogger(typeof(VisitsServiceController));
+
+
         //GET /api/VisitsService/test
         [HttpGet("test")]
         public IActionResult Test()
         {
+            Logger.Info("VisitsService test endpoint called");
             return Ok("Vists service is up and running");
         }
 

@@ -23,6 +23,7 @@ namespace SharepointSchedulerService.Controllers
         [HttpGet("test")]
         public IActionResult Test()
         {
+            Logger.Info("Proposals service test endpoint called");
             return Ok("Proposals service is up and running");
         }
 
@@ -44,7 +45,7 @@ namespace SharepointSchedulerService.Controllers
 
         //GET /api/ProposalsService/getExperimentReportsData
         [HttpGet("getExperimentReportsData")]
-        public async Task<ActionResult<string>> getExperimentReportsData(
+        public async Task<ActionResult<List<ExperimentWithReportDTO>>> getExperimentReportsData(
             [FromQuery] string facilityName,
             [FromQuery] int fromYear)
         {
