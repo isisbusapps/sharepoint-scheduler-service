@@ -49,10 +49,6 @@ namespace SharepointSchedulerService.Controllers
             [FromQuery] string facilityName,
             [FromQuery] int fromYear)
         {
-            return Ok($"Returning data for {facilityName} from year {fromYear}");
-            //Data here
-
-
             List<ExperimentWithReportDTO> experimentWithReportDTOs = new List<ExperimentWithReportDTO>();
 
             try
@@ -77,6 +73,5 @@ namespace SharepointSchedulerService.Controllers
 
             return experimentWithReportDTOs;
         }
-
     }
 }
