@@ -20,7 +20,6 @@ namespace SharepointSchedulerService.Helpers
         private readonly string artemisDriveId;
         private readonly string lsfDriveId;
 
-
         private GraphClient graphClient;
         /*
         private readonly string experimentalReportsClientId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365ClientId"];
@@ -30,9 +29,9 @@ namespace SharepointSchedulerService.Helpers
         private readonly string artemisDriveId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365ArtemisSiteDriveId"];
         private readonly string lsfDriveId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365LSFSiteDriveId"];
         */
+
         private static readonly ILog Logger = LogManager.GetLogger(typeof(SharepointDataAccess));
         private readonly string resultsFilter = "?orderby=lastModifiedDateTime desc&$top=500";
-
 
         public SharepointDataAccess()
         {

@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using log4net;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Nito.AsyncEx;
 using SharepointSchedulerService.Helpers;
 using SharepointSchedulerService.Models.DTOs;
 
@@ -10,6 +12,13 @@ namespace SharepointSchedulerService.Controllers
     [ApiController]
     public class ProposalsServiceController : ControllerBase
     {
+        private static readonly ILog Logger = LogManager.GetLogger(typeof(ProposalsServiceController));
+
+        public ProposalsServiceController()
+        {
+            Logger.Info("Proposals Logging initialised");
+        }
+
         //GET /api/ProposalsService/test
         [HttpGet("test")]
         public IActionResult Test()

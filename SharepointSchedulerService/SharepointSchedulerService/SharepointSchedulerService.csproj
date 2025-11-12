@@ -8,8 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="log4net" Version="3.2.0" />
-    <PackageReference Include="Microsoft.Graph" Version="5.96.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GraphClient">
+      <HintPath>..\..\..\libraries\GraphClient.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
