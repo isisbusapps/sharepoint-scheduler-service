@@ -15,7 +15,7 @@ namespace SharepointSchedulerService.Controllers
         [HttpGet("test")]
         public IActionResult Test()
         {
-            Logger.Info("VisitsService test endpoint called");
+            Logger.Info("ReportService test endpoint called");
             return Ok("Reports service is up and running");
         }
 
