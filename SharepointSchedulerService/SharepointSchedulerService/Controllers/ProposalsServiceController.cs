@@ -1,0 +1,42 @@
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace SharepointSchedulerService.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ProposalsServiceController : ControllerBase
+    {
+        [HttpGet("test")]
+        public IActionResult Test()
+        {
+            return Ok("Proposals Service is up and running");
+        }
+
+        //GET /api/ProposalsService/getClfRounds
+        [HttpGet("getClfRounds")]
+        public async Task<ActionResult<string>> GetClfRounds()
+        {
+            return Ok("List of CLF rounds returned here");
+            //Data here
+        }
+
+        //GET /api/ProposalsService/getIsisRounds
+        [HttpGet("getIsisRounds")]
+        public async Task<ActionResult<string>> getIsisRounds()
+        {
+            return Ok("List of ISIS rounds returned here");
+            //Data here
+        }
+
+        //GET /api/ProposalsService/getExperimentReportsData
+        [HttpGet("getExperimentReportsData")]
+        public async Task<ActionResult<string>> getExperimentReportsData(
+            [FromQuery] string facilityName,
+            [FromQuery] int fromYear)
+        {
+            return Ok($"Returning data for {facilityName} from year {fromYear}");
+            //Data here
+        }
+    }
+}
