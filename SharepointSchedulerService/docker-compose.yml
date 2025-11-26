@@ -8,6 +8,7 @@ services:
       - "8080:8080"
     volumes:
       - ./SharepointSchedulerService/secrets.json:/app/secrets.json:ro
+      - /mnt/c/FBS/Apps/secret-config/local/sharepoint-scheduler-service:/FBS/config
     environment:
       ASPNETCORE_ENVIRONMENT: "Docker"
       ASPNETCORE_URLS: "http://+:8080"

@@ -20,11 +20,18 @@ namespace SharepointSchedulerService.Controllers
             return "Welcome to Docker";
         }
 
-        [HttpGet("secret")]
-        public IActionResult GetSecret()
+        [HttpGet("localSecret")]
+        public IActionResult GetLocalSecret()
         {
             var dummyKey = _config["MySecrets:DummyKey"];
             return Ok(dummyKey);
+        }
+
+        [HttpGet("BISAppSecret")]
+        public IActionResult GetBISAppSecret()
+        {
+            var dummyBISAppKey = _config["MyBISAppSecrets:DummyBISAppKey"];
+            return Ok(dummyBISAppKey);
         }
     }
 }
