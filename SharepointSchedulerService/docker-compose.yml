@@ -1,6 +1,8 @@
 services:
   sharepoint-scheduler-service:
     image: sharepointschedulerservice:latest
+    build:
+      context: SharepointSchedulerService
     container_name: sharepoint-scheduler-service
     ports:
       - "8080:8080"
