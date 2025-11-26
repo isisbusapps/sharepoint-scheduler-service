@@ -6,6 +6,8 @@ services:
     container_name: sharepoint-scheduler-service
     ports:
       - "8080:8080"
+    volumes:
+      - ./SharepointSchedulerService/secrets.json:/app/secrets.json:ro
     environment:
       ASPNETCORE_ENVIRONMENT: "Docker"
       ASPNETCORE_URLS: "http://+:8080"
