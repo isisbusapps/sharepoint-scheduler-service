@@ -1,6 +1,6 @@
 ﻿namespace SharepointSchedulerService.Models.DTOs
 {
-    public enum DocType {Word, PDF};
+    public enum DocType { Word, PDF };
 
     public class ExperimentReportDTO
     {

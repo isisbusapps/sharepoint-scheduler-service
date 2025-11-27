@@ -7,11 +7,10 @@ namespace SharepointSchedulerService.Controllers
     [ApiController]
     public class ProposalsServiceController : ControllerBase
     {
-        //GET /api/ProposalsService/test
         [HttpGet("test")]
         public IActionResult Test()
         {
-            return Ok("Proposals service is up and running");
+            return Ok("Proposals Service is up and running");
         }
 
         //GET /api/ProposalsService/getClfRounds
@@ -39,6 +38,5 @@ namespace SharepointSchedulerService.Controllers
             return Ok($"Returning data for {facilityName} from year {fromYear}");
             //Data here
         }
-
     }
 }

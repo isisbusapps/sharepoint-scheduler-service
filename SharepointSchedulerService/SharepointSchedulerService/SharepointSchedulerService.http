@@ -1,4 +1,4 @@
-@SharepointSchedulerService_HostAddress = http://localhost:5143
+@SharepointSchedulerService_HostAddress = http://localhost:5079
 
 GET {{SharepointSchedulerService_HostAddress}}/weatherforecast/
 Accept: application/json

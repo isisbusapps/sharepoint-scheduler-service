@@ -6,7 +6,7 @@ namespace SharepointSchedulerService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ReportServiceController : ControllerBase
+    public class ReportsServiceController : ControllerBase
     {
         //GET /api/ReportService/test
         [HttpGet("test")]
