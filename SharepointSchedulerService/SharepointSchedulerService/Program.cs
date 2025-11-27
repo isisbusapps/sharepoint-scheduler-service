@@ -6,7 +6,7 @@ builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
     .AddJsonFile("/app/secrets.json", optional: true, reloadOnChange: true)
-    .AddJsonFile("/FBS/config/tempBISAppSettings.json", optional: true, reloadOnChange: true)
+    .AddJsonFile("/FBS/config/BISAppSettings.json", optional: true, reloadOnChange: true)
     .AddEnvironmentVariables();
 
 // Add services to the container.

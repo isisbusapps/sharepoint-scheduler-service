@@ -27,11 +27,20 @@ namespace SharepointSchedulerService.Controllers
             return Ok(dummyKey);
         }
 
+        /*
         [HttpGet("BISAppSecret")]
         public IActionResult GetBISAppSecret()
         {
             var dummyBISAppKey = _config["MyBISAppSecrets:DummyBISAppKey"];
             return Ok(dummyBISAppKey);
+        }
+        */
+
+        [HttpGet("365ArtemisSiteDriveId")]
+        public IActionResult GetArtemisSiteDriveId()
+        {
+            var ArtemisSiteDriveId = _config["SP:ExperimentalReports:365ArtemisSiteDriveId"];
+            return Ok(ArtemisSiteDriveId);
         }
     }
 }
