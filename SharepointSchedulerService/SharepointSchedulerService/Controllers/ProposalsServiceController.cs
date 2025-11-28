@@ -13,7 +13,12 @@ namespace SharepointSchedulerService.Controllers
     public class ProposalsServiceController : ControllerBase
     {
         private static readonly ILog Logger = LogManager.GetLogger(typeof(ProposalsServiceController));
+        private readonly SharepointDataAccess _sharepointDataAccess;
 
+        public ProposalsServiceController(SharepointDataAccess sharepointDataAccess)
+        {
+            _sharepointDataAccess = sharepointDataAccess;
+        }
 
         [HttpGet("test")]
         public IActionResult Test()
@@ -47,16 +52,17 @@ namespace SharepointSchedulerService.Controllers
 
             try
             {
-                SharepointDataAccess sharepointDataAccess = new SharepointDataAccess();
+                //SharepointDataAccess sharepointDataAccess = new SharepointDataAccess();
+
                 if (facilityName.Equals("ISIS"))
                 {
-                    experimentWithReportDTOs = AsyncContext.Run(() => sharepointDataAccess.GetISISExperimentalReportsListItems(fromYear));
+                    experimentWithReportDTOs = AsyncContext.Run(() => _sharepointDataAccess.GetISISExperimentalReportsListItems(fromYear));
                 }
                 else if (facilityName.Equals("CLF"))
                 {
-                    experimentWithReportDTOs.AddRange(AsyncContext.Run(() => sharepointDataAccess.GetHPLExperimentalReportsListItems(fromYear)));
-                    experimentWithReportDTOs.AddRange(AsyncContext.Run(() => sharepointDataAccess.GetLSFExperimentalReportsListItems(fromYear)));
-                    experimentWithReportDTOs.AddRange(AsyncContext.Run(() => sharepointDataAccess.GetArtemisExperimentalReportsListItems(fromYear)));
+                    experimentWithReportDTOs.AddRange(AsyncContext.Run(() => _sharepointDataAccess.GetHPLExperimentalReportsListItems(fromYear)));
+                    experimentWithReportDTOs.AddRange(AsyncContext.Run(() => _sharepointDataAccess.GetLSFExperimentalReportsListItems(fromYear)));
+                    experimentWithReportDTOs.AddRange(AsyncContext.Run(() => _sharepointDataAccess.GetArtemisExperimentalReportsListItems(fromYear)));
                 }
             }
             catch (ArgumentException ex)

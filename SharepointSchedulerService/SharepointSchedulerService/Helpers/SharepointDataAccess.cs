@@ -13,13 +13,17 @@ namespace SharepointSchedulerService.Helpers
         private static readonly ILog Logger = LogManager.GetLogger(typeof(SharepointDataAccess));
         private readonly string resultsFilter = "?orderby=lastModifiedDateTime desc&$top=500";
 
-        private readonly string isisDriveId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365ISISSiteDriveId"];
-        private readonly string hplDriveId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365HPLSiteDriveId"];
-        private readonly string artemisDriveId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365ArtemisSiteDriveId"];
-        private readonly string lsfDriveId = ConfigurationManager.AppSettings["EXPERIMENTALREPORTS.365LSFSiteDriveId"];
+        private readonly IConfiguration _config;
+
+        public SharepointDataAccess(IConfiguration config)
+        {
+            _config = config;
+        }  
 
         public async Task<List<ExperimentWithReportDTO>> GetISISExperimentalReportsListItems(int fromYear)
         {
+            var isisDriveId = _config["SP:ExperimentalReports:365ISISSiteDriveId"];
+
             Logger.InfoFormat("Getting ISIS Experimental Reports Data");
             var isisExperimentalReports = await graphClient.GetDriveItemsFiltered(isisDriveId, resultsFilter);
 
@@ -28,6 +32,8 @@ namespace SharepointSchedulerService.Helpers
 
         public async Task<List<ExperimentWithReportDTO>> GetHPLExperimentalReportsListItems(int fromYear)
         {
+            var hplDriveId = _config["SP:ExperimentalReports:365HPLSiteDriveId"];
+
             Logger.InfoFormat("Getting HPL Experimental Reports Data");
             var hplExperimentalReports = await graphClient.GetDriveItemsFiltered(hplDriveId, resultsFilter);
 
@@ -36,6 +42,8 @@ namespace SharepointSchedulerService.Helpers
 
         public async Task<List<ExperimentWithReportDTO>> GetLSFExperimentalReportsListItems(int fromYear)
         {
+            var lsfDriveId = _config["SP:ExperimentalReports:365LSFSiteDriveId"];
+
             Logger.InfoFormat("Getting LSF Experimental Reports Data");
             var lsfExperimentalReports = await graphClient.GetDriveItemsFiltered(lsfDriveId, resultsFilter);
 
@@ -44,6 +52,8 @@ namespace SharepointSchedulerService.Helpers
 
         public async Task<List<ExperimentWithReportDTO>> GetArtemisExperimentalReportsListItems(int fromYear)
         {
+            var artemisDriveId = _config["SP:ExperimentalReports:365ArtemisSiteDriveId"];
+
             Logger.InfoFormat("Getting Artemis Experimental Reports Data");
             var artemisExperimentalReports = await graphClient.GetDriveItemsFiltered(artemisDriveId, resultsFilter);
 
