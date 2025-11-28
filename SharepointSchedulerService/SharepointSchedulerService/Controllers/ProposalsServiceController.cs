@@ -44,7 +44,7 @@ namespace SharepointSchedulerService.Controllers
 
         //GET /api/ProposalsService/getExperimentReportsData
         [HttpGet("getExperimentReportsData")]
-        public async Task<ActionResult<List<ExperimentWithReportDTO>>> getExperimentReportsData(
+        public ActionResult<List<ExperimentWithReportDTO>> getExperimentReportsData(
             [FromQuery] string facilityName,
             [FromQuery] int fromYear)
         {
@@ -56,10 +56,12 @@ namespace SharepointSchedulerService.Controllers
 
                 if (facilityName.Equals("ISIS"))
                 {
+                    Logger.Info("ISIS facility");
                     experimentWithReportDTOs = AsyncContext.Run(() => _sharepointDataAccess.GetISISExperimentalReportsListItems(fromYear));
                 }
                 else if (facilityName.Equals("CLF"))
                 {
+                    Logger.Info("CLF facility");
                     experimentWithReportDTOs.AddRange(AsyncContext.Run(() => _sharepointDataAccess.GetHPLExperimentalReportsListItems(fromYear)));
                     experimentWithReportDTOs.AddRange(AsyncContext.Run(() => _sharepointDataAccess.GetLSFExperimentalReportsListItems(fromYear)));
                     experimentWithReportDTOs.AddRange(AsyncContext.Run(() => _sharepointDataAccess.GetArtemisExperimentalReportsListItems(fromYear)));

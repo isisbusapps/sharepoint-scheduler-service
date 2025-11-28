@@ -25,6 +25,7 @@ namespace SharepointSchedulerService.Helpers
             var isisDriveId = _config["SP:ExperimentalReports:365ISISSiteDriveId"];
 
             Logger.InfoFormat("Getting ISIS Experimental Reports Data");
+
             var isisExperimentalReports = await graphClient.GetDriveItemsFiltered(isisDriveId, resultsFilter);
 
             return JsonElementToExperimentWithReportDTO(isisExperimentalReports, "ISIS", fromYear);

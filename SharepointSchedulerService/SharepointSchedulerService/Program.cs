@@ -1,3 +1,4 @@
+using MSGraphClient;
 using SharepointSchedulerService.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
