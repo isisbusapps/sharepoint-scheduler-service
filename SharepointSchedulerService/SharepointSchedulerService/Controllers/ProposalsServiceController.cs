@@ -44,7 +44,7 @@ namespace SharepointSchedulerService.Controllers
 
         //GET /api/ProposalsService/getExperimentReportsData
         [HttpGet("getExperimentReportsData")]
-        public ActionResult<List<ExperimentWithReportDTO>> getExperimentReportsData(
+        public List<ExperimentWithReportDTO> getExperimentReportsData(
             [FromQuery] string facilityName,
             [FromQuery] int fromYear)
         {

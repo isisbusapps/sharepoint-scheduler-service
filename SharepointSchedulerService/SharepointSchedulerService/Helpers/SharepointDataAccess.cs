@@ -13,12 +13,20 @@ namespace SharepointSchedulerService.Helpers
         private static readonly ILog Logger = LogManager.GetLogger(typeof(SharepointDataAccess));
         private readonly string resultsFilter = "?orderby=lastModifiedDateTime desc&$top=500";
 
+        private readonly string experimentalReportsClientId;
+        private readonly string experimentalReportsClientSecretForSpSchedule;
+
         private readonly IConfiguration _config;
 
         public SharepointDataAccess(IConfiguration config)
         {
             _config = config;
-        }  
+
+            experimentalReportsClientId = _config["SP:ExperimentalReports:365ClientId"];
+            experimentalReportsClientSecretForSpSchedule = _config["SP:365ClientSecret"];
+
+            graphClient = new GraphClient(experimentalReportsClientId, experimentalReportsClientSecretForSpSchedule);
+        }
 
         public async Task<List<ExperimentWithReportDTO>> GetISISExperimentalReportsListItems(int fromYear)
         {
