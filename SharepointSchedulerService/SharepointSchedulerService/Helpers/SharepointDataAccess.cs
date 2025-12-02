@@ -1,7 +1,8 @@
 ﻿using log4net;
-using MSGraphClient;
 using Microsoft.AspNetCore.Mvc.Filters;
+using MSGraphClient;
 using SharepointSchedulerService.Models.DTOs;
+using System.Security.Authentication;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
@@ -9,12 +10,17 @@ namespace SharepointSchedulerService.Helpers
 {
     public class SharepointDataAccess
     {
-        private GraphClient graphClient;
+        private GraphClient graphClient; //REMOVE
+        private GraphClient graphClientSp;
+        private GraphClient graphClientReports;
         private static readonly ILog Logger = LogManager.GetLogger(typeof(SharepointDataAccess));
         private readonly string resultsFilter = "?orderby=lastModifiedDateTime desc&$top=500";
 
         private readonly string experimentalReportsClientId;
         private readonly string experimentalReportsClientSecretForSpSchedule;
+
+        private readonly string preliminaryReportsClientId;
+        private readonly string preliminaryReportsClientSecretForScheduleReports;
 
         private readonly IConfiguration _config;
 
@@ -25,7 +31,13 @@ namespace SharepointSchedulerService.Helpers
             experimentalReportsClientId = _config["SP:ExperimentalReports:365ClientId"];
             experimentalReportsClientSecretForSpSchedule = _config["SP:365ClientSecret"];
 
-            graphClient = new GraphClient(experimentalReportsClientId, experimentalReportsClientSecretForSpSchedule);
+            preliminaryReportsClientId = _config["Reports:365ClientId"];
+            preliminaryReportsClientSecretForScheduleReports = _config["Reports:365ClientSecret"];
+
+            graphClient = new GraphClient(experimentalReportsClientId, experimentalReportsClientSecretForSpSchedule); //REMOVE
+
+            graphClientSp = new GraphClient(experimentalReportsClientId, experimentalReportsClientSecretForSpSchedule);
+            graphClientReports = new GraphClient(preliminaryReportsClientId, preliminaryReportsClientSecretForScheduleReports);
         }
 
         public async Task<List<ExperimentWithReportDTO>> GetISISExperimentalReportsListItems(int fromYear)
@@ -129,6 +141,27 @@ namespace SharepointSchedulerService.Helpers
                 }
             }
             return referenceNumber;
+        }
+
+
+        public async Task UploadToSharePoint(byte[] documentBytes, string experimentReportFilename)
+        {
+            var preliminaryReportsDriveId = _config["Reports:365SiteDriveId"];
+
+            Logger.InfoFormat("Saving experiment report {0}", experimentReportFilename);
+
+            try
+            {
+                var driveItem = await graphClient.UploadNewDriveItem(preliminaryReportsDriveId, experimentReportFilename, documentBytes);
+
+                string itemId = driveItem.GetProperty("id").ToString();
+
+                await graphClient.UpdateDriveItemApplicationKey(preliminaryReportsDriveId, itemId, "Schedule Reports Service");
+            }
+            catch (AuthenticationException ex)
+            {
+                Logger.ErrorFormat("Document {0} could not be uploaded to sharepoint365. {1}", experimentReportFilename, ex.Message);
+            }
         }
     }
 }
