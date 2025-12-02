@@ -52,8 +52,6 @@ namespace SharepointSchedulerService.Controllers
 
             try
             {
-                //SharepointDataAccess sharepointDataAccess = new SharepointDataAccess();
-
                 if (facilityName.Equals("ISIS"))
                 {
                     Logger.Info("ISIS facility");
